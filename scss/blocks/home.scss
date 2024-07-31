@@ -1,0 +1,129 @@
+.home {
+  min-height: 1080px;
+  padding-bottom: 80px;
+  background-image: url("../public/img/home/home_bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 1599px) {
+    min-height: 810px;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 1439px) {
+    min-height: 826px;
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 779px) {
+    min-height: 633px;
+  }
+
+  &:before {
+    content: "";
+    width: min(998px, 100%);
+    height: 298px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(94.9000015258789px);
+    z-index: -1;
+
+    @media screen and (max-width: 1439px) {
+      height: 226px;
+    }
+  }
+}
+
+.home__socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms ease;
+
+    @media screen and (max-width: 779px) {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    &:hover {
+      background-color: #ccc;
+
+      svg {
+        transition: scale 200ms ease;
+        scale: 1.15;
+      }
+    }
+    &:active {
+      background-color: #fff;
+    }
+  }
+}
+
+.home__title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 120px;
+  text-align: right;
+  color: #fff;
+
+  @media screen and (max-width: 1439px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 779px) {
+    font-size: 50px;
+  }
+}
+
+.home__stars {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  div {
+    width: 140px;
+    height: 4px;
+    background-color: #fff;
+
+    @media screen and (max-width: 1439px) {
+      width: 100px;
+    }
+
+    @media screen and (max-width: 779px) {
+      width: 70px;
+      height: 2px;
+    }
+  }
+}
+
+.home__text {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  @media screen and (max-width: 779px) {
+    font-size: 13px;
+  }
+}
