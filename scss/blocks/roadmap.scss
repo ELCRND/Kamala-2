@@ -1,6 +1,16 @@
 .roadmap {
   padding-top: 33px;
   background-color: #000;
+
+  @media screen and (max-width: 1599px) {
+    padding-top: 50px;
+  }
+  @media screen and (max-width: 1439px) {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 779px) {
+    padding-top: 30px;
+  }
 }
 
 .roadmap__title {
@@ -11,6 +21,18 @@
   letter-spacing: -0.02em;
   color: #fff;
   text-align: center;
+
+  @media screen and (max-width: 1599px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 1439px) {
+    margin-bottom: 40px;
+    font-size: 90px;
+  }
+  @media screen and (max-width: 779px) {
+    margin-bottom: 30px;
+    font-size: 50px;
+  }
 }
 
 .roadmap__schedule {
@@ -19,19 +41,79 @@
   border-bottom: 1px solid #8e8e8e;
   border-top: 1px solid #8e8e8e;
 
+  @media screen and (max-width: 1439px) {
+    flex-direction: column;
+  }
+
   & > li {
     width: 50%;
     padding: 40px 60px;
     display: flex;
     gap: 50px;
 
+    @media screen and (max-width: 1599px) {
+      padding: 40px 50px;
+      flex-direction: column;
+      gap: 30px;
+    }
+    @media screen and (max-width: 1439px) {
+      width: 100%;
+      border-bottom: 1px solid #8e8e8e;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    @media screen and (max-width: 779px) {
+      padding: 30px 20px;
+    }
+
     &:nth-of-type(1) {
+      position: relative;
       gap: 36px;
+
+      a {
+        width: 64px;
+        height: 29px;
+        border-radius: 30px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000;
+        position: absolute;
+        top: 108px;
+        left: 60px;
+        transition: filter 200ms ease;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+        &:active {
+          filter: brightness(1);
+        }
+
+        @media screen and (max-width: 1599px) {
+          position: static;
+          margin-left: 13px;
+        }
+      }
+
+      @media screen and (max-width: 1599px) {
+        gap: 30px;
+      }
     }
 
     &:nth-of-type(1),
     &:nth-of-type(3) {
       border-right: 1px solid #8e8e8e;
+
+      @media screen and (max-width: 1439px) {
+        border-right: none;
+      }
     }
 
     &:nth-of-type(1),
@@ -42,11 +124,21 @@
     h3 {
       display: flex;
       gap: 10px;
+
+      @media screen and (max-width: 1599px) {
+        align-items: center;
+      }
+
       span {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 52px;
         color: #fff;
+
+        @media screen and (max-width: 779px) {
+          font-size: 32px;
+        }
+
         &:first-of-type {
           color: rgba(255, 255, 255, 0.5);
         }
@@ -79,6 +171,10 @@
           font-size: 17px;
           line-height: 135%;
           color: #7d7d7d;
+
+          @media screen and (max-width: 1599px) {
+            max-width: 100%;
+          }
         }
       }
 
